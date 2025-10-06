@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "singularName": "usuario",
+    "pluralName": "usuarios",
+    "displayName": "usuario"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nickname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "rol": {
+      "type": "enumeration",
+      "enum": [
+        "admin",
+        "jugador",
+        "invitado"
+      ]
+    },
+    "fecha_registro": {
+      "type": "datetime"
+    }
+  }
+}
