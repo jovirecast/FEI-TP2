@@ -15,19 +15,10 @@
 <h3> <i> I Know More Than You! </i> </h3>
 
 
-## Sistema de Gestión de contenidos (CMS)
+## Ejercicio 2
 
-<br>
-<p align="center">
-  <a href="./Strapi-TP2-FEI/">
-    <img src="https://strapi.io/assets/strapi-logo-light.svg" width="300px" alt="Strapi logo" />
-  </a>
-</p>
-
-## Framework
-
-<p align="center"><a href="./Laravel-TP2-FEI/" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+El primer commit consiste en el template sin modificación
 
 ## Aclaraciones
 
-Para la modificación de la plantilla CSS requerida y su correspondiente modificación se utiliza React como frontend.
+Debido a que el template era un HTML plano con CSS y una mínima funcionalidad con un script javascript, el mismo se adaptó al entorno de React utilizando Typescript de la manera más fidedigna posible, por lo que consideramos el mismo como el punto inicial del template para modificar.
