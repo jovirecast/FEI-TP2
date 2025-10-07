@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/header/header";
 import Home from "./pages/home/home";
-import Register from "./pages/register/register"
-import Trivia from "./pages/trivia/trivia"
+// import Register from "./pages/register/register"
+// import Trivia from "./pages/trivia/trivia"
 import Footer from "./components/footer/footer";
 import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
 

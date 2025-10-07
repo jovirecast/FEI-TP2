@@ -73,8 +73,8 @@ export default function Header() {
           </div>
         </nav>
         <div className="mobile-nav">
-          <a href="#features">Información del juego</a>
-          <a href="#timeline">Registrate</a>
+          <a href="#home">Información del juego</a>
+          <a href="#">Registrate</a>
           <a href="#contact">Contacto</a>
           <a
             href="https://example.com"
