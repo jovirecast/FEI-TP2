@@ -1,62 +1,59 @@
-export default function Body() {
-  return (<>
+export default function Home() {
+    return (<>
 
-    {/* <!-- Epic Neural Background --> */}
-    <div className="neural-background"></div>
-    
-    {/* <!-- Floating Geometric Shapes --> */}
-    <div className="geometric-shapes">
-        <div className="shape"></div>
-        <div className="shape"></div>
-        <div className="shape"></div>
-        <div className="shape"></div>
-    </div>
+        {/* <!-- Epic Neural Background --> */}
+        <div className="neural-background"></div>
 
-    {/* <!-- Neural Network Lines --> */}
-    <div className="neural-lines">
-        <div className="neural-line"></div>
-        <div className="neural-line"></div>
-        <div className="neural-line"></div>
-    </div>
-    
-    {/* <!-- Section 1: Hero --> */}
-    <section className="hero" id="home">
-        <div className="hero-content">
-            <div className="hero-subtitle">Welcome to the Future</div>
-            <h1>NEURAL INTERFACE</h1>
-            
-            <div className="hero-description">
-                <p>Experience the convergence of consciousness and technology through quantum-enhanced glassmorphism interfaces. Step into a reality where digital dreams become tangible experiences, transcending the boundaries between mind and machine.</p>
-            </div>
-
-            <div className="hero-stats">
-                <div className="hero-stat">
-                    <span className="hero-stat-number">99.9%</span>
-                    <span className="hero-stat-label">Neural Sync Rate</span>
-                </div>
-                <div className="hero-stat">
-                    <span className="hero-stat-number">∞</span>
-                    <span className="hero-stat-label">Processing Power</span>
-                </div>
-                <div className="hero-stat">
-                    <span className="hero-stat-number">0.001</span>
-                    <span className="hero-stat-label">Latency (ms)</span>
-                </div>
-                <div className="hero-stat">
-                    <span className="hero-stat-number">24/7</span>
-                    <span className="hero-stat-label">Neural Access</span>
-                </div>
-            </div>
-            
-            <div className="cta-buttons">
-                <a href="#features" className="cta-button">Initialize Neural Link</a>
-                <a href="#showcase" className="cta-button secondary">Explore Matrix</a>
-            </div>
+        {/* <!-- Floating Geometric Shapes --> */}
+        <div className="geometric-shapes">
+            <div className="shape"></div>
+            <div className="shape"></div>
+            <div className="shape"></div>
+            <div className="shape"></div>
         </div>
-    </section>
 
-    {/* <!-- Section 2: Diagonal Features --> */}
-    <section className="features" id="features">
+        {/* <!-- Neural Network Lines --> */}
+        <div className="neural-lines">
+            <div className="neural-line"></div>
+            <div className="neural-line"></div>
+            <div className="neural-line"></div>
+        </div>
+
+        {/* <!-- Section 1: Hero --> */}
+        <section className="hero" id="home">
+            <div className="hero-content">
+                <div className="hero-subtitle">Bienvenidos a IKMTY!</div>
+                <h1>I KNOW MORE THAN YOU!</h1>
+
+                <div className="hero-description text-[30px] text-white istok-web-bold border-b-1 border-white">
+                    <p>"I Know More Than You!" (IKMTY!) es un party game de preguntas y respuestas multijugador. Este juego busca proveer una competencia donde se ponga a prueba el conocimiento de sus participantes.</p>
+                </div>
+
+                <div className="hero-stats">
+                    <div className="hero-stat">
+                        <span className="hero-stat-number">6</span>
+                        <span className="hero-stat-label">Categorias de preguntas</span>
+                    </div>
+                    <div className="hero-stat">
+                        <span className="hero-stat-number">2 a 8</span>
+                        <span className="hero-stat-label">Jugadores simultáneos</span>
+                    </div>
+
+                    <div className="hero-stat">
+                        <span className="hero-stat-number">6</span>
+                        <span className="hero-stat-label">Fichas para vencerlos a todos</span>
+                    </div>
+                </div>
+
+                <div className="cta-buttons">
+                    <a href="#features" className="cta-button">Registrarse</a>
+                    <a href="#showcase" className="cta-button secondary">Trivia Test</a>
+                </div>
+            </div>
+        </section>
+
+        {/* <!-- Section 2: Diagonal Features --> */}
+        {/* <section className="features" id="features">
         <div className="features-container">
             <h2 className="section-title">QUANTUM CAPABILITIES</h2>
             <div className="diagonal-grid">
@@ -88,10 +85,10 @@ export default function Body() {
                 </div>
             </div>
         </div>
-    </section>
+    </section> */}
 
-    {/* <!-- Section 3: Hexagonal Showcase --> */}
-    <section className="showcase" id="showcase">
+        {/* <!-- Section 3: Hexagonal Showcase --> */}
+        {/* <section className="showcase" id="showcase">
         <h2 className="section-title">MATRIX PROTOCOLS</h2>
         <div className="hexagon-container">
             <div className="hexagon">
@@ -137,10 +134,10 @@ export default function Body() {
                 </div>
             </div>
         </div>
-    </section>
+    </section> */}
 
-    {/* <!-- Section 4: Timeline --> */}
-    <section className="timeline" id="timeline">
+        {/* <!-- Section 4: Timeline --> */}
+        {/* <section className="timeline" id="timeline">
         <h2 className="section-title">EVOLUTION TIMELINE</h2>
         <div className="timeline-container">
             <div className="timeline-line"></div>
@@ -181,42 +178,69 @@ export default function Body() {
                 <div className="timeline-dot"></div>
             </div>
         </div>
-    </section>
+    </section> */}
 
-    {/* <!-- Section 5: Contact --> */}
-    <section className="contact" id="contact">
-        <div className="contact-container">
-            <div className="contact-info glass">
-                <h3>ESTABLISH CONNECTION</h3>
-                <p>Ready to interface with the future? Our neural network specialists are standing by to guide you through the quantum realm of possibilities.</p>
-                <p>Connect through the dimensional gateway and let us initialize your journey into the digital consciousness matrix.</p>
-                
-                <div className="social-links">
-                    <a href="#" className="glass">📡</a>
-                    <a href="#" className="glass">🌐</a>
-                    <a href="#" className="glass">💬</a>
-                    <a href="#" className="glass">📨</a>
+        {/* <!-- Section 5: Contact --> */}
+        <section className="contact" id="contact">
+            <div className="contact-container">
+                <div className="contact-info glass">
+                    <h3>¿Alguna pregunta?</h3>
+                    <p>Contactate con nosotros en el siguiente formulario.</p>
+                    <p>Responderemos a la brevedad.</p>
+
+                    <div className="social-links">
+                        <div className="glass">
+                            <img
+                                src="https://img.icons8.com/arcade/64/physics.png"
+                                alt="physics"
+                            />
+                        </div>
+
+                        <div className="glass">
+                            <img
+                                src="https://img.icons8.com/arcade/64/music.png"
+                                alt="music"
+                            />
+                        </div>
+                        <div className="glass">
+                            <img
+                                src="https://img.icons8.com/arcade/64/edvard-munch.png"
+                                alt="edvard-munch"
+                            />
+                        </div>
+                        <div className="glass">
+                            <img
+                                src="https://img.icons8.com/arcade/64/america.png"
+                                alt="america"
+                            />
+                        </div>
+                        <div className="glass">
+                            <img
+                            src="https://img.icons8.com/arcade/64/books.png"
+                            alt="books"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="contact-form glass">
+                    <div className="form-group">
+                        <input type="text" placeholder="Nombre" required id="nombre"/>
+                    </div>
+                    <div className="form-group">
+                        <input type="email" placeholder="Correo electrónico" required id="email"/>
+                    </div>
+                    <div className="form-group">
+                        <input type="text" placeholder="Asunto" required id="asunto"/>
+                    </div>
+                    <div className="form-group">
+                        <textarea rows={5} placeholder="Tu mensaje" required id="mensaje"></textarea>
+                    </div>
+                    <button type="submit" className="submit-btn">Envía tu consulta</button>
                 </div>
             </div>
-            
-            <div className="contact-form glass">
-                <div className="form-group">
-                    <input type="text" placeholder="Neural ID (Name)" required />
-                </div>
-                <div className="form-group">
-                    <input type="email" placeholder="Quantum Channel (Email)" required />
-                </div>
-                <div className="form-group">
-                    <input type="text" placeholder="Mission Objective (Subject)" required />
-                </div>
-                <div className="form-group">
-                    <textarea rows={5} placeholder="Transmission Data (Message)" required></textarea>
-                </div>
-                <button type="submit" className="submit-btn">TRANSMIT TO MATRIX</button>
-            </div>
-        </div>
-    </section>
+        </section>
 
-</>
-  );
+    </>
+    );
 }

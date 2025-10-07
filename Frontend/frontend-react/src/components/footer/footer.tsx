@@ -5,21 +5,18 @@ export default function Footer() {
     <footer>
         <div className="footer-content">
             <div className="footer-links">
-                <a href="#features">Neural Networks</a>
-                <a href="#showcase">Matrix Protocols</a>
-                <a href="#timeline">Evolution</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Documentation</a>                 
-    			<a href="https://github.com/yourproject" target="_blank" rel="noopener">GitHub</a>
+                <a href="#home">Información del juego</a>
+                <a href="#contact">Contacto</a>
+                <a href="#">Registrate</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Términos y Condiciones</a>                              			
             </div>
             <div className="footer-copyright">
-                <p>&copy; 2025 NeuralGlass Interface. All quantum rights reserved across dimensions.</p>
+                <p>&copy; 2025 IKMTY!. All rights not reserved...yet!</p>
             </div>
             <div className="footer-design">
-                Design: <a href="https://templatemo.com" target="_blank" rel="nofollow noopener">TemplateMo</a> | 
-                Enhanced by Neural AI Systems | 
-                <a href="#">Quantum Framework</a>
+                Design: <a href="https://templatemo.com" target="_blank" rel="nofollow noopener">Grupo 17 - FEI</a> | 
+                Enhanced by several cups of coffee |                 
             </div>
         </div>
     </footer>

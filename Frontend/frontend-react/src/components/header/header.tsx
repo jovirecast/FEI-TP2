@@ -3,15 +3,17 @@ import Logo from "/logos/main.svg";
 export default function Header() {
   return (
     <>
-      <header className="glass w-2/5">
+      <header className="glass w-8/9">
         <nav>
-          <div className="w-full flex flex-col justify-center items-center gap-1 ">
-            <img src={Logo} alt="Logo" className="h-18 w-auto" />
-            <h1 className="text-[18px] flex justify-center items-center  text-white istok-web-bold border-b-1 border-white">
-              I Know More Than You!
-            </h1>
-         
-          {/*<a href="#home" class="logo">
+          <div className="w-full flex flex-row justify-between items-center gap-1 ">
+            <div className="flex flex-col justify-center">
+              <img src={Logo} alt="Logo" className="h-18 w-auto" />
+              <h1 className="text-[18px] flex justify-center items-center  text-white istok-web-bold border-b-1 border-white">
+                I Know More Than You!
+              </h1>
+            </div>
+
+            {/*<a href="#home" class="logo">
                 <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -41,32 +43,34 @@ export default function Header() {
                 </svg>
                 NEURALGLASS
             </a> */}
-          <ul className="nav-links">
-            <li>
-              <a href="#features">Información del juego</a>
-            </li>            
-            <li>
-              <a href="#timeline">Registrate</a>
-            </li>
-            <li>
-              <a href="#contact">Contacto</a>
-            </li>
-            <li>
-              <a
-                href="https://example.com"
-                target="_blank"
-                className="external-link"
-              >
-                ¡Empezá a jugar!
-              </a>
-            </li>
-          </ul>
-          <div className="mobile-menu-toggle">
-            <div className="hamburger-line"></div>
-            <div className="hamburger-line"></div>
-            <div className="hamburger-line"></div>
+            <div className="flex flex-row">
+              <ul className="nav-links">
+                <li>
+                  <a href="#home">Información del juego</a>
+                </li>
+                <li>
+                  <a href="#contact">Contacto</a>
+                </li>
+                <li>
+                  <a href="#">Registrate</a>
+                </li>
+                <li>
+                  <a
+                    href="https://example.com"
+                    target="_blank"
+                    className="external-link"
+                  >
+                    ¡Empezá a jugar!
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="mobile-menu-toggle">
+              <div className="hamburger-line"></div>
+              <div className="hamburger-line"></div>
+              <div className="hamburger-line"></div>
+            </div>
           </div>
-           </div>
         </nav>
         <div className="mobile-nav">
           <a href="#features">Información del juego</a>
@@ -80,7 +84,7 @@ export default function Header() {
             ¡Empezá a jugar!
           </a>
         </div>
-        
+
       </header>
     </>
   );
