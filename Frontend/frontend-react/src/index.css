@@ -5,9 +5,9 @@ TemplateMo 597 Neural Glass
 https://templatemo.com/tm-597-neural-glass
 
 */
-
-
 @charset "utf-8";
+@import "tailwindcss";
+
 /* CSS Document */
  * {
      margin: 0;
@@ -170,11 +170,11 @@ https://templatemo.com/tm-597-neural-glass
 /* Enhanced Header */
  header {
      position: fixed;
-     top: 20px;
+     top: 15px;
      left: 50%;
      transform: translateX(-50%);
      z-index: 100;
-     width: 96%;
+     /* width: 96%; */
      max-width: 1200px;
      padding: 18px 35px;
      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
