@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "preguntas",
+  "info": {
+    "singularName": "pregunta",
+    "pluralName": "preguntas",
+    "displayName": "Pregunta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categoria": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "preguntas"
+    },
+    "texto": {
+      "type": "text"
+    },
+    "respuestas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::respuesta.respuesta",
+      "mappedBy": "pregunta"
+    }
+  }
+}

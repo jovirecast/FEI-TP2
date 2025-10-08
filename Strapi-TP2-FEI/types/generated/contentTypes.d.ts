@@ -430,10 +430,137 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCategoriaCategoria extends Struct.CollectionTypeSchema {
+  collectionName: 'categorias';
+  info: {
+    displayName: 'Categoria';
+    pluralName: 'categorias';
+    singularName: 'categoria';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::categoria.categoria'
+    > &
+      Schema.Attribute.Private;
+    nombre: Schema.Attribute.String;
+    preguntas: Schema.Attribute.Relation<'oneToMany', 'api::pregunta.pregunta'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiContactoContacto extends Struct.CollectionTypeSchema {
+  collectionName: 'contactos';
+  info: {
+    displayName: 'Contacto';
+    pluralName: 'contactos';
+    singularName: 'contacto';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    asunto: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contacto.contacto'
+    > &
+      Schema.Attribute.Private;
+    nombre: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    texto: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPreguntaPregunta extends Struct.CollectionTypeSchema {
+  collectionName: 'preguntas';
+  info: {
+    displayName: 'Pregunta';
+    pluralName: 'preguntas';
+    singularName: 'pregunta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    categoria: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::categoria.categoria'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pregunta.pregunta'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    respuestas: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::respuesta.respuesta'
+    >;
+    texto: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiRespuestaRespuesta extends Struct.CollectionTypeSchema {
+  collectionName: 'respuestas';
+  info: {
+    displayName: 'Respuesta';
+    pluralName: 'respuestas';
+    singularName: 'respuesta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    es_correcta: Schema.Attribute.Boolean;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::respuesta.respuesta'
+    > &
+      Schema.Attribute.Private;
+    pregunta: Schema.Attribute.Relation<'manyToOne', 'api::pregunta.pregunta'>;
+    publishedAt: Schema.Attribute.DateTime;
+    texto: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiUsuarioUsuario extends Struct.CollectionTypeSchema {
   collectionName: 'usuarios';
   info: {
-    displayName: 'usuario';
+    displayName: 'Usuario';
     pluralName: 'usuarios';
     singularName: 'usuario';
   };
@@ -445,7 +572,6 @@ export interface ApiUsuarioUsuario extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
-    fecha_registro: Schema.Attribute.DateTime;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -455,7 +581,8 @@ export interface ApiUsuarioUsuario extends Struct.CollectionTypeSchema {
     nickname: Schema.Attribute.String;
     password: Schema.Attribute.Password;
     publishedAt: Schema.Attribute.DateTime;
-    rol: Schema.Attribute.Enumeration<['admin', 'jugador', 'invitado']>;
+    rol: Schema.Attribute.Enumeration<['admin', 'jugador', 'invitado']> &
+      Schema.Attribute.DefaultTo<'jugador'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -972,6 +1099,10 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::categoria.categoria': ApiCategoriaCategoria;
+      'api::contacto.contacto': ApiContactoContacto;
+      'api::pregunta.pregunta': ApiPreguntaPregunta;
+      'api::respuesta.respuesta': ApiRespuestaRespuesta;
       'api::usuario.usuario': ApiUsuarioUsuario;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
