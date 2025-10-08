@@ -946,7 +946,7 @@ https://templatemo.com/tm-597-neural-glass
      align-items: center;
 }
  .contact-info {
-     padding: 60px 40px;
+     /* padding: 60px 40px; */
      position: relative;
 }
  .contact-info::before {
