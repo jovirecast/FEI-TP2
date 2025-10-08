@@ -1,27 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function Home() {
-    
+
     return (
         <>
-            {/* <!-- Epic Neural Background --> */}
-            <div className="neural-background"></div>
-
-            {/* <!-- Floating Geometric Shapes --> */}
-            <div className="geometric-shapes">
-                <div className="shape"></div>
-                <div className="shape"></div>
-                <div className="shape"></div>
-                <div className="shape"></div>
-            </div>
-
-            {/* <!-- Neural Network Lines --> */}
-            <div className="neural-lines">
-                <div className="neural-line"></div>
-                <div className="neural-line"></div>
-                <div className="neural-line"></div>
-            </div>
-
             {/* <!-- Section 1: Hero --> */}
             <section className="hero" id="home">
                 <div className="hero-content">
@@ -56,10 +38,10 @@ export default function Home() {
 
                     <div className="cta-buttons">
                         <Link to="/register" className="cta-button">
-                                Registrarse
+                            Registrarse
                         </Link>
                         <Link to="/trivia" className="cta-button secondary">
-                                Trivia Test
+                            Trivia Test
                         </Link>
                     </div>
                 </div>

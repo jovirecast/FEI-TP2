@@ -14,6 +14,23 @@ function App() {
   return (
       <BrowserRouter>
         <Header />
+        {/* <!-- Epic Neural Background --> */}
+            <div className="neural-background"></div>
+
+            {/* <!-- Floating Geometric Shapes --> */}
+            <div className="geometric-shapes">
+                <div className="shape"></div>
+                <div className="shape"></div>
+                <div className="shape"></div>
+                <div className="shape"></div>
+            </div>
+
+            {/* <!-- Neural Network Lines --> */}
+            {/* <div className="neural-lines">
+                <div className="neural-line"></div>
+                <div className="neural-line"></div>
+                <div className="neural-line"></div>
+            </div> */}
         <AnimatedBackground/>
         <Routes>
           <Route path="/" element={<Home />} />

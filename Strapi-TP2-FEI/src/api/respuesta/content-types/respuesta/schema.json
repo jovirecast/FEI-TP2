@@ -11,17 +11,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "pregunta": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::pregunta.pregunta",
-      "inversedBy": "respuestas"
-    },
     "texto": {
       "type": "string"
     },
     "es_correcta": {
       "type": "boolean"
+    },
+    "pregunta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pregunta.pregunta",
+      "inversedBy": "respuestas"
     }
   }
 }
