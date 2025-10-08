@@ -1,4 +1,5 @@
 import Logo from "/logos/main.svg";
+import { Link, Route } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -46,22 +47,24 @@ export default function Header() {
             <div className="flex flex-row">
               <ul className="nav-links">
                 <li>
-                  <a href="#home">Información del juego</a>
+                  <Link to="/">
+                    Información del juego
+                  </Link>
                 </li>
                 <li>
-                  <a href="#contact">Contacto</a>
+                  <Link to="/contact">
+                    Contacto
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Registrate</a>
+                  <Link to="/register">
+                    Registrate
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="https://example.com"
-                    target="_blank"
-                    className="external-link"
-                  >
-                    ¡Empezá a jugar!
-                  </a>
+                  <Link to="/trivia">
+                    Trivia Test
+                  </Link>
                 </li>
               </ul>
             </div>
