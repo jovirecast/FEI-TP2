@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function RegisterLogin() {
+export default function RegisterStrapi() {
   const strapiUrl = import.meta.env.VITE_API_STRAPI;
 
   // --- Estado para registro ---
@@ -118,7 +118,9 @@ export default function RegisterLogin() {
       <div className="hero-content contact-container ">
         {/* --- FORMULARIO REGISTRO --- */}
         <form className="contact-form glass" onSubmit={handleSubmitRegister}>
+          
           <div className="text-center contact-info">
+            <h1><b>Strapi</b></h1>
             <h3 className="text-[20px]">
               ¿Querés ser parte de nuestros usuarios?
             </h3>
@@ -192,6 +194,7 @@ export default function RegisterLogin() {
         {/* --- FORMULARIO LOGIN --- */}
         <form className="contact-form glass" onSubmit={handleSubmitLogin}>
           <div className="text-center contact-info">
+            <h1><b>Strapi</b></h1>
             <h3 className="text-[20px]">¿Ya te registraste?</h3>
             <p>Validá tus credenciales</p>
           </div>

@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('respuestas', function (Blueprint $table) {
-            $table->id('id_respuesta');
-            $table->unsignedBigInteger('id_pregunta');
+        Schema::create('pregunta', function (Blueprint $table) {
+            $table->id('id_pregunta');
+            $table->unsignedBigInteger('id_categoria');
             $table->string('texto', 255);
-            $table->boolean('es_correcta')->default(false);
 
-            $table->foreign('id_pregunta')
-                ->references('id_pregunta')->on('preguntas')
+            $table->foreign('id_categoria')
+                ->references('id_categoria')->on('categoria')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('respuestas');
+        Schema::dropIfExists('pregunta');
     }
 };

@@ -1,5 +1,5 @@
 import Logo from "/logos/main.svg";
-import { Link, Route } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 export default function Header() {
   return (
@@ -51,22 +51,44 @@ export default function Header() {
                     Información del juego
                   </Link>
                 </li>
-                <li>
-                  <Link to="/contact">
-                    Contacto
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/register">
-                    Registrate
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/trivia">
-                    Trivia Test
-                  </Link>
-                </li>
+                <div className="flex flex-col gap-2">
+                  <li>
+                    <Link to="/contactStrapi">
+                      Contacto (Strapi)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/contactLaravel">
+                      Contacto (Laravel)
+                    </Link>
+                  </li>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <li>
+                    <Link to="/registerStrapi">
+                      Registrate (Strapi)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/registerLaravel">
+                      Registrate (Laravel)
+                    </Link>
+                  </li>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <li>
+                    <Link to="/triviaStrapi">
+                      Trivia Test (Strapi)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/triviaLaravel">
+                      Trivia Test (Laravel)
+                    </Link>
+                  </li>
+                </div>
               </ul>
+              
             </div>
             <div className="mobile-menu-toggle">
               <div className="hamburger-line"></div>

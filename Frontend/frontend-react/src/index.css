@@ -388,7 +388,7 @@ https://templatemo.com/tm-597-neural-glass
      background: radial-gradient(circle, rgba(224, 163, 255, 0.04) 0%, transparent 70%);
      transform: translate(-50%, -50%);
      animation: heroGlow 10s ease-in-out infinite;
-     z-index: -1;
+     z-index: -1;     
 }
  @keyframes heroGlow {
      0%, 100% {
@@ -946,7 +946,7 @@ https://templatemo.com/tm-597-neural-glass
      align-items: center;
 }
  .contact-info {
-     /* padding: 60px 40px; */
+     padding: 60px 40px;
      position: relative;
 }
  .contact-info::before {
@@ -971,7 +971,7 @@ https://templatemo.com/tm-597-neural-glass
     }
 }
  .contact-form {
-     padding: 50px 40px;
+     padding: 20px;
 }
  .form-group {
      margin-bottom: 30px;

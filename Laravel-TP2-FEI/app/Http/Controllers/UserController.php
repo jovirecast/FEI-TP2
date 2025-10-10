@@ -4,29 +4,37 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    // GET /api/users
     public function index()
     {
         return response()->json(User::all(), 200);
     }
 
-    // POST /api/users
     public function store(Request $request)
     {
-        $user = User::create($request->all());
+        $request->validate([
+            'usuario' => 'required|string|unique:user,usuario',
+            'password' => 'required|string|min:6',
+            'email' => 'nullable|email'
+        ]);
+
+        $user = User::create([
+            'usuario' => $request->usuario,
+            'password' => Hash::make($request->password),
+            'email' => $request->email,
+        ]);
+
         return response()->json($user, 201);
     }
 
-    // GET /api/users/{id}
     public function show($id)
     {
         return response()->json(User::findOrFail($id), 200);
     }
 
-    // PUT /api/users/{id}
     public function update(Request $request, $id)
     {
         $user = User::findOrFail($id);
@@ -34,7 +42,6 @@ class UserController extends Controller
         return response()->json($user, 200);
     }
 
-    // DELETE /api/users/{id}
     public function destroy($id)
     {
         User::destroy($id);

@@ -25,8 +25,8 @@ interface Pregunta {
 * Este componente funciona correctamente si ya existe una pregunta cargada en la base de datos consultada.
 * Si no es así, se puede crear una pregunta manualmente en el CMS Strapi.
 */
-export default function Trivia() {
-  const API_STRAPI = import.meta.env.VITE_API_STRAPI;
+export default function TriviaLaravel() {
+  const laravelUrl = import.meta.env.VITE_API_LARAVEL;
 
   const [pregunta, setPregunta] = useState<Pregunta | null>(null);
   const [respuestaSeleccionada, setRespuestaSeleccionada] =
@@ -42,7 +42,7 @@ export default function Trivia() {
     setRespuestaSeleccionada(null);
     setResultado("");
     try {
-      const res = await fetch(`${API_STRAPI}/preguntas?populate=respuestas`);
+      const res = await fetch(`${laravelUrl}/preguntas?populate=respuestas`);
       if (!res.ok) throw new Error("Error al traer preguntas");
 
       const data = await res.json();
@@ -78,6 +78,9 @@ export default function Trivia() {
       <section className="hero" id="home">
         <div className="hero-content p-6">
           <div className="flex flex-col glass gap-3 m-4">
+            <div className="text-center">
+              <h2><b>Laravel</b></h2>
+            </div>
             <h2 className="text-xl font-semibold mb-4 text-center">
               {pregunta.texto}
             </h2>

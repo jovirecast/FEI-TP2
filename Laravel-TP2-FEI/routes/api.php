@@ -2,6 +2,7 @@
 
 // use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PreguntaController;
@@ -14,8 +15,9 @@ Route::get('/ping', function() {
 });
 
 // Rutas API REST para todas tus entidades
-Route::apiResource('users', UserController::class);
-Route::apiResource('categorias', CategoriaController::class);
-Route::apiResource('preguntas', PreguntaController::class);
-Route::apiResource('respuestas', RespuestaController::class);
-Route::apiResource('contactos', ContactoController::class);
+Route::apiResource('user', UserController::class);
+Route::apiResource('categoria', CategoriaController::class);
+Route::apiResource('pregunta', PreguntaController::class);
+Route::apiResource('respuesta', RespuestaController::class);
+Route::apiResource('contacto', ContactoController::class);
+Route::post('/login', [AuthController::class, 'login']);

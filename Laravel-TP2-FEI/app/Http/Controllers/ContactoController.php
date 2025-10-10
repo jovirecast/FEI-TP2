@@ -14,7 +14,15 @@ class ContactoController extends Controller
 
     public function store(Request $request)
     {
-        $contacto = Contacto::create($request->all());
+        $validated = $request->validate([
+            'nombre' => 'required|string|max:100',
+            'email' => 'required|email|max:100',
+            'asunto' => 'required|string|max:150',
+            'texto' => 'required|string',
+            'creacion' => 'nullable|date'
+        ]);
+
+        $contacto = Contacto::create($validated);
         return response()->json($contacto, 201);
     }
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Contact() {
+export default function ContactStrapi() {
   const strapiUrl = import.meta.env.VITE_API_STRAPI;
 
   const [formData, setFormData] = useState({
@@ -44,8 +44,11 @@ export default function Contact() {
     <>
       {/* <!-- Section 5: Contact --> */}
       <section className="contact" id="contact">
-        <div className="hero-content contact-container">
+        <div className="hero-content contact-container text-center">
           <div className="contact-info glass">
+            <div className="text-center">
+              <h1><b>Strapi</b></h1>
+            </div>
             <h3>¿Alguna pregunta?</h3>
             <p>Contactate con nosotros en el siguiente formulario.</p>
             <p>Responderemos a la brevedad.</p>
