@@ -38,26 +38,21 @@ export default function TriviaLaravel() {
     traerPreguntaAleatoria();
   }, []);
 
-  const traerPreguntaAleatoria = async () => {
-    setRespuestaSeleccionada(null);
-    setResultado("");
-    try {
-      const res = await fetch(`${laravelUrl}/preguntas?populate=respuestas`);
-      if (!res.ok) throw new Error("Error al traer preguntas");
+const traerPreguntaAleatoria = async () => {
+  setRespuestaSeleccionada(null);
+  setResultado("");
 
-      const data = await res.json();
-      if (data.data.length === 0) {
-        setPregunta(null);
-        return;
-      }
+  try {
+    const res = await fetch(`${laravelUrl}/pregunta/random`);
+    if (!res.ok) throw new Error("Error al traer pregunta");
 
-      const randomIndex = Math.floor(Math.random() * data.data.length);
-      const pregunta = data.data[randomIndex];
-      setPregunta(pregunta);
-    } catch (error) {
-      console.error("Error al traer pregunta:", error);
-    }
-  };
+    const data: Pregunta = await res.json();
+    setPregunta(data);
+  } catch (error) {
+    console.error("Error al traer pregunta:", error);
+  }
+};
+
 
   const seleccionarRespuesta = (r: Respuesta) => {
     setRespuestaSeleccionada(r);

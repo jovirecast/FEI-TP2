@@ -12,6 +12,12 @@ class PreguntaController extends Controller
         return response()->json(Pregunta::with('respuestas', 'categoria')->get(), 200);
     }
 
+    public function random()
+    {
+        $pregunta = Pregunta::with('respuestas')->inRandomOrder()->first();
+        return response()->json($pregunta);
+    }
+
     public function store(Request $request)
     {
         $pregunta = Pregunta::create($request->all());

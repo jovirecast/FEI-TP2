@@ -17,7 +17,9 @@ Route::get('/ping', function() {
 // Rutas API REST para todas tus entidades
 Route::apiResource('user', UserController::class);
 Route::apiResource('categoria', CategoriaController::class);
+Route::get('/pregunta/random', [PreguntaController::class, 'random']);
 Route::apiResource('pregunta', PreguntaController::class);
 Route::apiResource('respuesta', RespuestaController::class);
 Route::apiResource('contacto', ContactoController::class);
 Route::post('/login', [AuthController::class, 'login']);
+
