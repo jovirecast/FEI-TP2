@@ -23,9 +23,9 @@ Se encuentra en la rama "Ej2", el primer commit consiste en el template sin modi
 
 Se encuentra en la rama "Ej3" que utiliza de origen la rama "Ej2".
 
-## Trabajo Páctico 4
+## Trabajo Páctico 3
 
-Se encuentra en la rama "TP4" que utiliza de origen la rama "main".
+Se encuentra en la rama "TP3" que utiliza de origen la rama "main".
 
 ## Aclaraciones
 
