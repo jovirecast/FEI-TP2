@@ -53,22 +53,12 @@ export default function Header() {
                 </li>
                 <div className="flex flex-col gap-2">
                   <li>
-                    <Link to="/contactStrapi">
-                      Contacto (Strapi)
-                    </Link>
-                  </li>
-                  <li>
                     <Link to="/contactLaravel">
                       Contacto (Laravel)
                     </Link>
                   </li>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <li>
-                    <Link to="/registerStrapi">
-                      Registrate (Strapi)
-                    </Link>
-                  </li>
                   <li>
                     <Link to="/registerLaravel">
                       Registrate (Laravel)
@@ -77,13 +67,8 @@ export default function Header() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <li>
-                    <Link to="/triviaStrapi">
-                      Trivia Test (Strapi)
-                    </Link>
-                  </li>
-                  <li>
                     <Link to="/triviaLaravel">
-                      Trivia Test (Laravel)
+                      Open Trivia DB (API #1)
                     </Link>
                   </li>
                 </div>

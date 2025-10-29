@@ -1,0 +1,25 @@
+{
+  "name": "fei-tp2",
+  "version": "1.0.0",
+  "description": "- [FAI-3169] Benitez, Franco Fabian\r - [FAI-4594] Pesce, Matías Nicolás\r - [FAI-3220] Reyes Castelló, José Vicente",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx concurrently \"npm run dev --prefix Frontend/frontend-react\" \"cd Laravel-TP2-FEI && php artisan serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jovirecast/FEI-TP2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jovirecast/FEI-TP2/issues"
+  },
+  "homepage": "https://github.com/jovirecast/FEI-TP2#readme",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

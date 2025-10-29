@@ -20,11 +20,11 @@ interface Pregunta {
   respuestas: Respuesta[];
 }
 
-/* 
-* IMPORTANTE:
-* Este componente funciona correctamente si ya existe una pregunta cargada en la base de datos consultada.
-* Si no es así, se puede crear una pregunta manualmente en el CMS Strapi.
-*/
+/*
+ * IMPORTANTE:
+ * Este componente funciona correctamente si ya existe una pregunta cargada en la base de datos consultada.
+ * Si no es así, se puede crear una pregunta manualmente en el CMS Strapi.
+ */
 export default function TriviaLaravel() {
   const laravelUrl = import.meta.env.VITE_API_LARAVEL;
 
@@ -38,21 +38,20 @@ export default function TriviaLaravel() {
     traerPreguntaAleatoria();
   }, []);
 
-const traerPreguntaAleatoria = async () => {
-  setRespuestaSeleccionada(null);
-  setResultado("");
+  const traerPreguntaAleatoria = async () => {
+    setRespuestaSeleccionada(null);
+    setResultado("");
 
-  try {
-    const res = await fetch(`${laravelUrl}/pregunta/random`);
-    if (!res.ok) throw new Error("Error al traer pregunta");
+    try {
+      const res = await fetch(`${laravelUrl}/pregunta/random`);
+      if (!res.ok) throw new Error("Error al traer pregunta");
 
-    const data: Pregunta = await res.json();
-    setPregunta(data);
-  } catch (error) {
-    console.error("Error al traer pregunta:", error);
-  }
-};
-
+      const data: Pregunta = await res.json();
+      setPregunta(data);
+    } catch (error) {
+      console.error("Error al traer pregunta:", error);
+    }
+  };
 
   const seleccionarRespuesta = (r: Respuesta) => {
     setRespuestaSeleccionada(r);
@@ -70,47 +69,70 @@ const traerPreguntaAleatoria = async () => {
     );
   return (
     <>
-      <section className="hero" id="home">
-        <div className="hero-content p-6">
-          <div className="flex flex-col glass gap-3 m-4">
+      <section className="contact" id="contact">
+        <div className="hero-content contact-container">
+          <div className="contact-info glass">
             <div className="text-center">
-              <h2><b>Laravel</b></h2>
             </div>
-            <h2 className="text-xl font-semibold mb-4 text-center">
-              {pregunta.texto}
-            </h2>
+            <h3>Descripción de módulo</h3>
+            <p>Detalle del módulo trivia utilizando API.</p>
+            <h4>API #1</h4>
+            <p>Detalle API #1</p>
+            {/*<h4>API #2 (si se usa acá, sino a su propio tab)</h4>
+            <p>Detalle API #2</p>*/}
 
-            <div className="flex flex-col items-center gap-4">
-              {pregunta.respuestas.map((r, i) => (
-                <button
-                  key={i}
-                  onClick={() => seleccionarRespuesta(r)}
-                   disabled={!!respuestaSeleccionada}
-                  className={`w-1/2 p-3 rounded-lg border transition ${
-                    respuestaSeleccionada?.texto === r.texto
-                      ? r.es_correcta
-                        ? "bg-green-100 border-green-500"
-                        : "bg-red-100 border-red-500"
-                      : "hover:bg-gray-100 border-gray-300"}
-                      ${respuestaSeleccionada ? "cursor-not-allowed opacity-70" : ""}
+
+          </div>
+          <div className="hero" id="home">
+            <div className="hero-content p-6">
+              <div className="flex flex-col glass gap-3 m-4">
+                <div className="text-center">
+                  <h2>
+                    <b>{/*Laravel*/}</b>
+                  </h2>
+                </div>
+                <h2 className="text-xl font-semibold mb-4 text-center">
+                  {pregunta.texto}
+                </h2>
+
+                <div className="flex flex-col items-center gap-4">
+                  {pregunta.respuestas.map((r, i) => (
+                    <button
+                      key={i}
+                      onClick={() => seleccionarRespuesta(r)}
+                      disabled={!!respuestaSeleccionada}
+                      className={`w-1/2 p-3 rounded-lg border transition ${
+                        respuestaSeleccionada?.texto === r.texto
+                          ? r.es_correcta
+                            ? "bg-green-100 border-green-500"
+                            : "bg-red-100 border-red-500"
+                          : "hover:bg-gray-100 border-gray-300"
+                      }
+                      ${
+                        respuestaSeleccionada
+                          ? "cursor-not-allowed opacity-70"
+                          : ""
+                      }
                   `}
-                >
-                  {r.texto}
-                </button>
-              ))}
-            </div>
+                    >
+                      {r.texto}
+                    </button>
+                  ))}
+                </div>
 
-            {resultado && (
-              <p className="mt-4 text-center font-medium">{resultado}</p>
-            )}
+                {resultado && (
+                  <p className="mt-4 text-center font-medium">{resultado}</p>
+                )}
 
-            <div className="text-center mt-6">
-              <button
-                onClick={traerPreguntaAleatoria}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
-              >
-                Nueva pregunta aleatoria
-              </button>
+                <div className="text-center mt-6">
+                  <button
+                    onClick={traerPreguntaAleatoria}
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
+                  >
+                    Nueva pregunta aleatoria
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
