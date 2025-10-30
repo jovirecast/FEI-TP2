@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PreguntaController;
 use App\Http\Controllers\RespuestaController;
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\ThumbnailController;
 
 // Ruta de prueba rápida
 Route::get('/ping', function() {
@@ -22,4 +23,5 @@ Route::apiResource('pregunta', PreguntaController::class);
 Route::apiResource('respuesta', RespuestaController::class);
 Route::apiResource('contacto', ContactoController::class);
 Route::post('/login', [AuthController::class, 'login']);
+Route::post('/capture', [ThumbnailController::class, 'capture']);
 
