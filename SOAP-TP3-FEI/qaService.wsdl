@@ -44,7 +44,8 @@
 
   <!-- Binding SOAP -->
   <binding name="QAServiceBinding" type="tns:QAServicePortType">
-    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <!-- <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/> -->
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
     <operation name="GetAllQuestions">
       <soap:operation soapAction="GetAllQuestions"/>
