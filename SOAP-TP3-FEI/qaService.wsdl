@@ -1,0 +1,76 @@
+<definitions name="QAService"
+             targetNamespace="http://example.com/qa"
+             xmlns:tns="http://example.com/qa"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+  <!-- Mensajes -->
+  <message name="GetAllQuestionsRequest"/>
+  <message name="GetAllQuestionsResponse">
+    <part name="result" type="xsd:string"/>
+  </message>
+
+  <message name="GetRandomQuestionRequest"/>
+  <message name="GetRandomQuestionResponse">
+    <part name="result" type="xsd:string"/>
+  </message>
+
+  <message name="GetQuestionByIdRequest">
+    <part name="id" type="xsd:int"/>
+  </message>
+  <message name="GetQuestionByIdResponse">
+    <part name="result" type="xsd:string"/>
+  </message>
+
+  <!-- PortType: operaciones -->
+  <portType name="QAServicePortType">
+    <operation name="GetAllQuestions">
+      <input message="tns:GetAllQuestionsRequest"/>
+      <output message="tns:GetAllQuestionsResponse"/>
+    </operation>
+
+    <operation name="GetRandomQuestion">
+      <input message="tns:GetRandomQuestionRequest"/>
+      <output message="tns:GetRandomQuestionResponse"/>
+    </operation>
+
+    <operation name="GetQuestionById">
+      <input message="tns:GetQuestionByIdRequest"/>
+      <output message="tns:GetQuestionByIdResponse"/>
+    </operation>
+
+  </portType>
+
+  <!-- Binding SOAP -->
+  <binding name="QAServiceBinding" type="tns:QAServicePortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+    <operation name="GetAllQuestions">
+      <soap:operation soapAction="GetAllQuestions"/>
+      <input><soap:body use="literal"/></input>
+      <output><soap:body use="literal"/></output>
+    </operation>
+
+    <operation name="GetRandomQuestion">
+      <soap:operation soapAction="GetRandomQuestion"/>
+      <input><soap:body use="literal"/></input>
+      <output><soap:body use="literal"/></output>
+    </operation>
+
+    <operation name="GetQuestionById">
+      <soap:operation soapAction="GetQuestionById"/>
+      <input><soap:body use="literal"/></input>
+      <output><soap:body use="literal"/></output>
+    </operation>
+
+  </binding>
+
+  <!-- Service / Endpoint -->
+  <service name="QAService">
+    <port name="QAServicePort" binding="tns:QAServiceBinding">
+      <soap:address location="http://localhost:3000/qaService"/>
+    </port>
+  </service>
+
+</definitions>
