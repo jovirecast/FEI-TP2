@@ -41,6 +41,9 @@ Elegimos las siguientes API RESTful a implementar:
 - La base de datos utiliza el motor MySQL en la plataforma XAMPP.
 
 - Para poder utilizarlos es necesario correr los siguientes comandos en la consola desde la ruta principal:
+    - Para utilizar el wrapper SOAP: <br>
+
+    Seguir las instrucciones <a href="./SOAP-TP3-FEI/">en el README.md de su subcarpeta </a>
     - Para el frontend:
     ```bash
     cd .\Frontend\

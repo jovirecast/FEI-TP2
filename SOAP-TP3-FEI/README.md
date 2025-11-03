@@ -12,3 +12,8 @@
  - Configuración de acceso a la bd se especifica en el archivo dbConfig.js
  - Esquema de bd especificado en db schema.sql, en root del repo
  - El servicio SOAP debe estar ejecutandose para que el Wrapper funcione
+ - Para que la api RESTful funcione se debe agregar al .env en el directorio del frontend la clave
+
+ ```bash
+ VITE_API_WRAPPER=http://localhost:4000
+ ```
