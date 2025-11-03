@@ -75,18 +75,14 @@ export default function TriviaLaravel() {
           <div className="contact-info glass">
             <div className="text-center">
             </div>
-            <h3>Descripción de módulo</h3>
-            <p>Detalle del módulo trivia utilizando API.</p>
-            <h4>API #1</h4>
-            <p>Detalle API #1</p>
-            {/*<h4>API #2 (si se usa acá, sino a su propio tab)</h4>
-            <p>Detalle API #2</p>*/}
-
-
+            <h3>Módulo de preguntas y respuestas aleatorias</h3>
+            <p>Este módulo hace uso de un servicio SOAP por intermedio de un wrapper RESTful</p>
+            <h3>Objetivo buscado</h3>
+            <p>Lo que se busca es que el frontend en lugar de buscar una pregunta aleatoria y sus respectivas respuestas por intermedio de una ruta del backend que consulta la base de datos, lo haga solicitando los datos desde un wrapper RESTful de un servicio SOAP, siendo solo evidente el cambio desde el lado del programador y no del usuario.</p>
           </div>
           <div className="hero" id="home">
             <div className="hero-content p-6">
-              <div className="flex flex-col glass gap-3 m-4">
+              <div className="flex flex-col glass gap-3 m-0 px-12 pb-2">
                 <div className="text-center">
                   <h2>
                     <b>{/*Laravel*/}</b>
@@ -96,7 +92,7 @@ export default function TriviaLaravel() {
                   {pregunta.texto}
                 </h2>
 
-                <div className="flex flex-col items-center gap-4">
+                <div className="flex flex-col items-center gap-4 w-100 mx-auto">
                   {pregunta.respuestas.map((r, i) => (
                     <button
                       key={i}
