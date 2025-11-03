@@ -26,6 +26,10 @@ Elegimos las siguientes API RESTful a implementar:
 - <a href= "https://opentdb.com/">Open Trivia Database</a>: API con una base de datos de preguntas y respuestas en inglés.
 - <a href= "https://qrandom.io/docs/dice">Roll the Dice with Quantum Randomness</a>: API para obtener un resultado aleatorio simulando un dado de seis caras.
 
+## Trabajo Páctico 4
+
+Se encuentra en la rama "TP4" que utiliza de origen la rama "main".
+
 ## Aclaraciones
 
 - El proyecto cuenta con la dependencia concurrently a fin de facilitar la ejecución del proyecto, para poder utilizarlo es necesario ejecutar los siguientes comandos en la consola desde la ruta principal:
