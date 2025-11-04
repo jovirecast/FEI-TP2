@@ -60,15 +60,15 @@ export default function Header() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <li>
-                    <Link to="/registerLaravel">
-                      Registrate (Laravel)
+                    <Link to="/triviaAPI">
+                      API Open Trivia DB
                     </Link>
                   </li>
                 </div>
                 <div className="flex flex-col gap-2">
                   <li>
-                    <Link to="/triviaLaravel">
-                      Open Trivia DB (API #1)
+                    <Link to="/triviaSOAP">
+                      Wrapper SOAP
                     </Link>
                   </li>
                 </div>

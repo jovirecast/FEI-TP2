@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header/header";
 import Home from "./pages/home/home";
 import ContactLaravel from "./pages/Laravel/contactLaravel/contactLaravel";
-import RegisterLaravel from "./pages/Laravel/registerLaravel/registerLaravel"
-import TriviaLaravel from "./pages/Laravel/triviaLaravel/triviaLaravel"
+import TriviaAPI from "./pages/Laravel/registerLaravel/triviaAPI"
+import TriviaSOAP from "./pages/Laravel/triviaLaravel/triviaSOAP";
 import Footer from "./components/footer/footer";
 import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
 
@@ -36,8 +36,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />          
           <Route path="/contactLaravel" element={<ContactLaravel />} />
-          <Route path="/registerLaravel" element={<RegisterLaravel />} />
-          <Route path="/triviaLaravel" element={<TriviaLaravel />} />
+          <Route path="/triviaAPI" element={<TriviaAPI />} />
+          <Route path="/triviaSOAP" element={<TriviaSOAP />} />
         </Routes>
         <Footer />
       </BrowserRouter>  

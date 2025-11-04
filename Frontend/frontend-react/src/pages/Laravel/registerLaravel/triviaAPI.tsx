@@ -25,10 +25,9 @@ interface Pregunta {
  * Este componente funciona correctamente si ya existe una pregunta cargada en la base de datos consultada.
  */
 
-export default function TriviaLaravel() {
-  // const laravelUrl = import.meta.env.VITE_API_LARAVEL;
-  const wrapperUrl = import.meta.env.VITE_API_WRAPPER; // Usamos el wrapper del SOAP para obtener preguntas
-
+export default function TriviaAPI() {
+  const laravelUrl = import.meta.env.VITE_API_LARAVEL;
+  
   const [pregunta, setPregunta] = useState<Pregunta | null>(null);
   const [respuestaSeleccionada, setRespuestaSeleccionada] =
     useState<Respuesta | null>(null);
@@ -44,7 +43,7 @@ export default function TriviaLaravel() {
     setResultado("");
 
     try {
-      const res = await fetch(`${wrapperUrl}/preguntas/random`);
+      const res = await fetch(`${laravelUrl}/trivia/random`);
       if (!res.ok) throw new Error("Error al traer pregunta");
 
       const data: Pregunta = await res.json();
@@ -76,9 +75,9 @@ export default function TriviaLaravel() {
             <div className="text-center">
             </div>
             <h3>Módulo de preguntas y respuestas aleatorias</h3>
-            <p>Este módulo hace uso de un servicio SOAP por intermedio de un wrapper RESTful</p>
+            <p>Este módulo hace uso de la API Open Trivia DB</p>
             <h3>Objetivo buscado</h3>
-            <p>Lo que se busca es que el frontend en lugar de buscar una pregunta aleatoria y sus respectivas respuestas por intermedio de una ruta del backend que consulta la base de datos, lo haga solicitando los datos desde un wrapper RESTful de un servicio SOAP, siendo solo evidente el cambio desde el lado del programador y no del usuario.</p>
+            <p>Consumir los datos de preguntas y respuestas desde la API, de manera tal que la solicitud a la API se realiza desde el backend para mejorar el rendimiento del usuario al evitar realizar un procesamiento inecesario al usuario.</p>
           </div>
           <div className="hero" id="home">
             <div className="hero-content p-6">
