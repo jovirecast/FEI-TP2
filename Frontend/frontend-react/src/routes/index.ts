@@ -4,4 +4,5 @@ export const routes = {
     TriviaAPI: "/triviaAPI",
     TriviaSOAP: "/triviaSOAP",
     contactLaravel: "/contactLaravel",
+    avatarSelect: "/avatarSelect"
 }

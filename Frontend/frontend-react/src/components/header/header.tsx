@@ -53,8 +53,8 @@ export default function Header() {
                 </li>
                 <div className="flex flex-col gap-2">
                   <li>
-                    <Link to="/contactLaravel">
-                      Contacto (Laravel)
+                    <Link to="/avatarSelect">
+                      API Dice Bear
                     </Link>
                   </li>
                 </div>
@@ -71,7 +71,7 @@ export default function Header() {
                       Wrapper SOAP
                     </Link>
                   </li>
-                </div>
+                </div>                
               </ul>
               
             </div>
