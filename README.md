@@ -2,29 +2,22 @@
 
 ## Año 2025 - Tecnicatura Universitaria en Desarrollo Web
 
-## Trabajo práctico Nº 3 - Servicios Web e Interoperabilidad
+## Trabajo práctico Nº 4 - Analizando los resultados
 
 ## Estudiantes:
 
 - [FAI-3169] Benitez, Franco Fabian
-- [FAI-4594] Pesce, Matías Nicolás
 - [FAI-3220] Reyes Castelló, José Vicente
 
 ## Dominio
 
 <h3> <i> I Know More Than You! </i> </h3>
 
-
-## Ejercicio 1
-
-El servicio web SOAP utilizado es [...]. <br>
-La implementación del wrapper REST para el servicio SOAP se puede encontrar en [...].
-
-## Ejercicio 2
-
-Elegimos las siguientes API RESTful a implementar:
-- <a href= "https://opentdb.com/">Open Trivia Database</a>: API con una base de datos de preguntas y respuestas en inglés.
-- <a href= "https://qrandom.io/docs/dice">Roll the Dice with Quantum Randomness</a>: API para obtener un resultado aleatorio simulando un dado de seis caras.
+## Funcionalidades
+- Registro y validación de usuario
+- Formulario de Contacto
+- Trivia Test
+- Selección de avatar aleatorio
 
 ## Aclaraciones
 
