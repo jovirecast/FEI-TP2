@@ -47,7 +47,7 @@ export default function ContactLaravel() {
         <div className="hero-content contact-container">
           <div className="contact-info glass">
             <div className="text-center">
-              <h1><b>Laravel</b></h1>
+              {/* <h1><b>Laravel</b></h1> */}
             </div>
             <h3>¿Alguna pregunta?</h3>
             <p>Contactate con nosotros en el siguiente formulario.</p>

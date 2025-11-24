@@ -1,8 +1,9 @@
-
 export const routes = {
     home: "/",
     TriviaAPI: "/triviaAPI",
-    TriviaSOAP: "/triviaSOAP",
+    // TriviaSOAP: "/triviaSOAP",
     contactLaravel: "/contactLaravel",
-    avatarSelect: "/avatarSelect"
+    avatarSelect: "/avatarSelect",
+    registerLaravel: "/registerLaravel",
+    triviaLaravel: "/triviaLaravel",    
 }

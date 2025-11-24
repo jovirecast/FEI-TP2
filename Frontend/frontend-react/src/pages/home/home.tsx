@@ -37,10 +37,10 @@ export default function Home() {
                     </div>
 
                     <div className="cta-buttons">
-                        <Link to="/register" className="cta-button">
+                        <Link to="/registerLaravel" className="cta-button">
                             Registrarse
                         </Link>
-                        <Link to="/trivia" className="cta-button secondary">
+                        <Link to="/triviaLaravel" className="cta-button secondary">
                             Trivia Test
                         </Link>
                     </div>

@@ -10,13 +10,13 @@ export default function Footer() {
                     <Link to="/">
                         Información del juego
                     </Link>
-                    <Link to="/contact">
+                    <Link to="/contactLaravel">
                         Contacto
                     </Link>
-                    <Link to="/register">
+                    <Link to="/registerLaravel">
                         Registrate
                     </Link>
-                    <Link to="/trivia">
+                    <Link to="/triviaLaravel">
                         Trivia Test
                     </Link>
                     <a href="#">Política de privacidad</a>
@@ -26,7 +26,7 @@ export default function Footer() {
                     <p>&copy; 2025 IKMTY!. All rights not reserved...yet!</p>
                 </div>
                 <div className="footer-design">
-                    Design: <a href="https://templatemo.com" target="_blank" rel="nofollow noopener">Grupo 17 - FEI</a> |
+                    Design: <a href="https://templatemo.com" target="_blank" rel="nofollow noopener">Templatemo</a> |
                     Enhanced by several cups of coffee |
                 </div>
             </div>
